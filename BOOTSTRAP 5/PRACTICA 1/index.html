@@ -12,7 +12,9 @@
   </head>
   <body>
     <!-- 1° paso container, h1 y p -->
-    <main class="container text-center">
+    <!-- 14° Paso D-FLEX alineamos verticalmente/ con vh-100 abarca el 100% del dispositivo-->
+    <!-- 15° continuando paso anterior agregamos justify para centrar y vh-md-100 lo anulamos? -->
+    <main class="container text-center d-flex flex-column vh-md-100 justify-content-center">
       <h1 class="h1 Display-4">Lista de Precios</h1>
       <p class="Lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, rem reprehenderit. Illum, eum, perferendis laboriosam sunt minima fugit, explicabo in placeat similique dignissimos vel labore? Necessitatibus earum soluta numquam neque.</p>
       <!-- 2° Paso centrar h1 y p de arriba o todo el proyecto como es este caso, por lo tanto ponemos en el main que aqui abarca todo,la clase text-center -->
@@ -21,30 +23,65 @@
       <!-- 4° Paso construir el Grid para 3 Cards -->
       <!-- 5° Paso Estructuracion HTML usamos <main> y <article> -->
         <!-- 6° Paso redondear bordes de las Cards y darles color -->
+        <!-- 7° Paso agregar precio con su fuente de texto -->
+        <!-- 8° Paso agregar texto con fuente monospace -->
+        <!-- 9° Paso agregar una lista ul -->
+        <!-- 10° Paso los botones con el ancla -->
       <div class="row">
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4 my-3">
           <!-- ponemos la clase border dentro de un div para que las cards no esten pegadas unas a otras -->
           <div class="border border-dark rounded">
-            <p>BASIC</p>
+            <p class="mt-5 fw-bold">BASIC</p>
+            <h2 class="display-4 mt-2">$100</h2>
+            <p class="font-monospace mt-4">Up to 5 user for free</p>
+            <ul class="list-unstyled my-5">
+              <li>Lorem, ipsum</li>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+            <!-- 11° con d-block hacemos que el elemento en linea pase a block y ocupe todo el ancho, asi obtenemos el color azul en todo el ancho  -->
+            <a href="#" class="bg-info d-block py-3 text-white text-decoration-none">Acceder</a>
           </div> 
         </article>
 
-        <article class="col-12 col-md-4">
-          <div class="border border-dark rounded">
-            <p>PRO</p>
+        <article class="col-12 col-md-4 my-3">
+          <div class="border border-dark rounded text-white bg-dark">
+            <p class="mt-5 fw-bold">PRO</p>
+            <h2 class="display-4">$300</h2>
+            <p class="font-monospace mt-4">Up to 15 user for free</p>
+            <ul class="list-unstyled my-5">
+              <li>Lorem, ipsum</li>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+              <!-- 11° con d-block hacemos que el elemento en linea pase a block y ocupe todo el ancho, asi obtenemos el color azul en todo el ancho  -->
+              <a href="#" class="bg-secondary d-block py-3 text-white text-decoration-none">Acceder</a>
+            
           </div>
           
         </article>
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4 my-3">
           <div class="border border-dark rounded">
-            <p>ULTIMATE</p>
+            <p class="mt-5 fw-bold">ULTIMATE</p>
+            <h2 class="display-4">$500</h2>
+            <p class="font-monospace mt-4">Up to 50 user for free</p>
+            <ul class="list-unstyled my-5">
+              <li>Lorem, ipsum</li>
+              <li>Lorem ipsum dolor sit</li>
+              <li>Lorem, ipsum dolor</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+            <!-- 11° con d-block hacemos que el elemento en linea pase a block y ocupe todo el ancho, asi obtenemos el color azul en todo el ancho  -->
+            <a href="#" class="bg-info d-block py-3 text-white text-decoration-none">Acceder</a>
           </div>
           </article>
 
       </div>
+      <!-- 12° Paso el footer -->
+      <footer class="my-2"> Designed by Parsival 😀</footer>
     </main>
     
-
-
   </body>
 </html>
