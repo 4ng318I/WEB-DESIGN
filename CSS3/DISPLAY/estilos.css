@@ -1,0 +1,20 @@
+.bg-c {
+    background-color: aqua;
+}
+
+/* Block ocupa el 100% ancho automaticamente*/
+.block {
+    display: block;
+}
+
+/*Inline ocupa solamente lo necesario y si hay sitio pone todos en linea*/
+.inline {
+    display: inline;
+}
+
+/* ==== MIRA ESTO ===
+https: //www.w3schools.com/cssref/css_default_values.asp
+
+z.B los ancla tienen por defecto display inline, los h p div tienes por defecto display block
+
+*/

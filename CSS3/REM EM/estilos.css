@@ -1,0 +1,41 @@
+
+/*
+=== REM Por defecto el Navegador usa 16px en la etiqueta <html> ===
+*/
+
+html {
+    font-size: 16px; /* la etiqueta html siempre tiene 16px a no se que lo cambie yo */
+}
+/* puedes incluso comentar o borrar el font-size:16px del html, el navegador tiene 16px por defecto */
+
+
+/*
+=== EM usa siempre su Medida y si no la tienes usa la del Padre y si no sigue subiendo ===*/
+
+body {
+    font-size: 32px;
+}
+/* En este caso va a coger el font-size del body, su Padre. Verlo en Inspector-calculado */
+
+.titulo {
+    background-color: brown;
+    padding: 3rem;
+    font-size: 3em;
+}
+
+
+/* OJO!! LO SUYO ES COMO A CONTINUACION */
+
+html {
+    font-size: 16px;
+    /* la etiqueta html siempre tiene 16px a no se que lo cambie yo */
+}
+
+
+.titulo {
+    background-color: brown;
+    padding: 1rem;
+    font-size: 3em;
+}
+
+/* de esta forma es el padding tambien autoescalable. Fuente crece...crece tambien el padding proporcional. cambia solo el font en em z.B 4em y el padding dejalo en 1rem*/

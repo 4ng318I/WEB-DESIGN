@@ -1,0 +1,138 @@
+/* LOS COLORES DEL PROYECTO
+primary: #ffbe0b
+secondary: #fb5607
+danger: #ff006e
+info: #3a86ff
+*/
+
+
+/* REGLAS GENERALES */
+
+/* box-sizing */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* FUENTES DEL PROYECTO */
+
+body {
+    font-family: 'Ubuntu',
+    sans-serif;
+}
+
+/* CONTENEDOR */
+
+
+.container {
+    /* bg para poder visualizar mejor, al final lo quitamos */
+    /* background-color: chocolate; */
+    /* para que tenga un poco de espacio a cada lado independiente del tamanho */
+    width: 95%;
+    /* definimos un max de ancho */
+    max-width: 600px;
+    /* margin auto centramos el contenedor */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* separacion entre todos los bloques */
+.mt-2 {
+    margin-top: 2rem;
+}
+
+
+/* LOGO */
+
+.logo {
+    background-color: #ffbe0b;
+    text-decoration: none;
+    /* ancla es inline, para centrar necesitamos poner display:block */
+    text-align: center;
+    display: block;
+    /* truco de 1em y 4rem para que las medidas sean proporcionales */
+    padding: 1em;
+    font-size: 4rem;
+    color: cornsilk;
+}
+
+
+/* LOS BOTONES */
+
+/* clase general de todos los botones */
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    padding: .5em;
+    margin: 0 .1em;
+    border-radius: .5em;
+}
+
+/* clase para cada boton */
+
+.btn-primary {
+    color: cornsilk;
+    background-color: #ffbe0b;
+}
+
+.btn-secondary {
+    color: cornsilk;
+    background-color: #fb5607;
+}
+
+.btn-danger {
+    color: black;
+    background-color: #ff006e;
+}
+
+.btn-info {
+    color: black;
+    background-color: #3a86ff;
+}
+
+/* LAS TARJETAS */
+
+.card-padd {
+    padding-bottom: 2rem;
+}
+
+.card {
+    width: 19rem;
+    background-color:#ffbe0b;
+    /* usamos overflow para pegar la imagen a la caja de texto inferior */
+    overflow: hidden;
+    color: blanchedalmond;
+    border-radius: .5em;
+}
+
+.card-img {
+    /* para que la imagen no se vea cortada y se ajuste al contenedor */
+    width: 100%;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 1em 0;
+    /* elegimos fuentes de google fonts que tenemos en nuestro index.html */
+    font-weight: 700;
+}
+
+.card-body p {
+    font-weight: 400;
+}
+
+/* agregar un margin a la parte de abajo de la card */
+.mb-2 {
+    margin-bottom: 2rem;
+}

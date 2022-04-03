@@ -1,0 +1,118 @@
+.container {
+    width: 90%;
+    /* para centrar */
+    margin-left: auto;
+    margin-right: auto;
+    /* para separar de arriba */
+    margin-top: 16px;
+}
+
+.h-700 {
+    /* para testear el align-items */
+    height: 700px;
+}
+
+.h-200 {
+    /* para testear align-self */
+    height: 200px;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+.item {
+    border: 2px black solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: coral;
+    /* para probar el flex-wrap */
+    /* width: 200px; para probar el flex-grow*/
+}
+
+/* === PROPIEDADES RELACIONADAS CON EL CONTENEDOR PADRE === */
+/* hace que los items sean mas flexibles */
+/* consulta la guia de flexbox - la tienes en el buscador guardada */
+.flex-container {
+    display: flex;
+    /* por defecto esta en row */
+    flex-direction: row-reverse;
+    /* hace que al disminuir la pantalla se apilen los Items sin que se desborden */
+    flex-wrap: wrap;
+    /* para centrar los items en la caja */
+    justify-content: center;
+    /* y este para dejar espacios por todas partes del item */
+    /* justify-content: space-around;  le quitamos para probar el flex-grow */
+    /* Los alinea donde queramos */
+    align-items: flex-end;
+    /* por defecto tiene siempre flex-start */
+    align-items: flex-end;
+    /* parecido a justifz-content pero aqui lo hace verticalmente */
+    align-content: space-between;
+}
+
+/* === PROPIEDADES RELACIONADAS CON LOS ITEMS-HIJOS === */
+
+/* colocar los items por defecto tienen valor 0 y es el que tiene prioridad sobre 1, 2, 3, 4..etc */
+
+.order-1 {
+    order: 1;
+}
+
+.order-0 {
+    order: 0;
+}
+
+.order-2 {
+    order: 2;
+}
+
+/* La Propiedad FLEX.GROW */
+/* con esta propiedad el item tratara de ocupar el max espacio posible */
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+/* hace que el item ocupe aprox. el doble de espacio que los otros items */
+.flex-grow-2 {
+    flex-grow: 2;
+}
+/* el item ocupa aprox. el triple que los otros */
+.flex-grow-3 {
+    flex-grow: 3;
+}
+
+/* La Propiedad FLEX_SCHRINK */
+/* Con esta propiedad tendra un ancho minimo de 400. si baja de 400 se desbordará; por el contrario si hay mas de 400 crecerá */
+.flex-schrink-0 {
+    width: 400px;
+    flex-shrink: 0;
+}
+
+/* Propiedad FLEX-BASIS */
+/* obligamos a un item a tener un tamano determinado */
+
+.flex-basis-1 {
+    flex-basis: 50%;
+    /* intenta quedarse con el 50% de su linea y si no hay espacio cambia de linea porque teneremos flex-wrap */
+}
+
+/* Porpiedad FLEX */
+/* tiene 3 valores - por orden son flex-glow, flex-schrink y flex-basis */
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    /* si dejo el 2° valor en 0 se desbordara cuando haya un tamano menor que 300px */
+    flex: 1 1 300px;
+}
+
+/* Propiedad ALIGN-SELF */
+/* Podemos posicionar un item donde queramos independientemente de la posicion de los otros */
+.align-self-start {
+    align-self: flex-start;
+}

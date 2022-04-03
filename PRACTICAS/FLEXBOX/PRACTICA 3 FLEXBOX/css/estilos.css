@@ -1,0 +1,304 @@
+/* REGLAS GENERALES */
+/* REUTILIZADAS DE PRACTICA 2 */
+
+/* box-sizing */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway',
+    sans-serif;
+}
+
+/* 1° PASO EL CONTAINER */
+/* ESTA PARTE SON CLASES UTILITARIAS */
+/* REUTILIZADO DE PRACTICA 2 */
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* agrego un max */
+    max-width: 1280px;
+}
+
+/* BOTON REUTILIZADO DE PRACTICA 2 */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+/* POPIEDADES DE COLORES REUTILIZADOS DE PRACTICA 2 */
+/* Estraemos Colores con color.adobe.com */
+.btn-primary {
+    color: white;
+    background-color: #1E403A;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #76A698;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #A63C58;
+}
+
+.btn-info {
+    color: black;
+    background-color: #D9D0C1;
+}
+
+.btn-dark {
+    color: black;
+    background-color: #E0F2C4;
+}
+
+/* 2° Paso img de Fondo del HEADER */
+
+.bg-header {
+    background-image: url("../assets/img/bg-header-min.jpg");
+    /* los 16px de la html, asi tiene 300px de altura, no usa width xk no es display:flex */
+    height: 18.75em;
+    /* las 3 siguientes para posicionar la imagen grande en modo movil */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 3° Paso colocar un fondo con trasparencia a la navbar */
+.bg-navbar {
+    background-color: rgba(0, 0, 0, 0.486);
+    padding: 1.5em;
+}
+
+/* 4° Paso colocar los Items del nav con flex - usa la guia */
+
+.navbar {
+    display: flex;
+    /* lo ponemos en columnas */
+    flex-direction: column;
+    /* justify es para horizontal, asi que usamos align-items para columnas  */
+    align-items: center;
+}
+
+/* BREAKPOINT 768PX */
+
+@media (min-width:768px) {
+    .navbar { /* hereda todo lo que tiene .navbar, solo ponemos lo nuevo */
+        flex-direction: row;
+        /* justifi porque ahora trabajamos con row */
+        justify-content: space-between; /* uno a la izquierda, otro a la derecha */
+
+    }
+}
+
+
+/* 5° Paso colocar con flexbox el navbar-brand --> LOgo y Titulo */
+
+.navbar-brand {
+    /* con flex y en columnas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    /* agregamos tamanho fuente de nuestro html */
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+/* 6° Paso tamanho del Logo y cambiarle el color */
+
+.navbar-brand img {
+    width: 2em;
+    /* para ponerla en blanco modificamos el datei logo.svg */
+    /* El logo sale de Icons en googleFonts */
+}
+
+/* BREAKPOINT 768PX */
+
+@media (min-width:768px) {
+    .navbar-brand {
+        flex-direction: row;
+        /* quitamos el margin-bottom 1em de .navbar-brand asi queda alineado todo */
+        margin-bottom: 0;
+    }
+}
+
+/* 7° Paso la Barra de Navegar */
+
+/* ponemos un fondo negro, un border radius y un padding */
+.navbar-nav {
+    background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+/* colocar llos items del menu */
+.nav-link {
+    display: inline-block;
+    padding: 0.3em;
+    color: white;
+    text-decoration:none;
+}
+
+/* Al pasar el maus sobre el menu cambie las propiedades */
+.nav-link:hover {
+    background-color: white;
+    color: black;
+    border-radius: 0.3em;
+}
+
+/* Paso 10 MAIN y MAIN-TITLE */
+
+.main {
+    background-color: white;
+    padding: 0.3em;
+    /* para montarnos le damos valor -2em */
+    margin-top: -2em;
+    border-radius: 0.3em;
+}
+
+.main-title {
+    text-align: center;
+    /* ponemos titulo en MAYUSCULA */
+    text-transform: uppercase;
+}
+
+/* llevar a las cards a colocarse en columnas con display:flex */
+@media (min-width:768px) {
+    .tienda {
+        display: flex;
+        /* agregamos una separacion entre cards */
+        gap: 1em;
+    }
+}
+
+
+/* 8° Paso - LAS CARDS */
+
+/* Reutilizamos todo card de la practica 2, quitamos el width de .card xk trabajamos con flex */
+.card {
+    /* ponemos color danger */
+    background-color: #A63C58;
+    color: white;
+    overflow: hidden;
+    border-radius: 0.5em;
+    /* separamos las cards */
+    margin-bottom: 1em;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 1em 0;
+    /* font-weight de nuestras fuentes de html */
+    font-weight: 500;
+}
+
+.card-body p {
+    /* de nuestra pag html */
+    font-weight: 200;
+}
+
+/* 9° Paso Agregamos el estilo de btn y Colores - ver arriba clases utilitarias */
+/* 10° Paso tambien arriba MAIN y MAIN-TITLE */
+/* 11° Paso NOSOTROS */
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A63C58;
+    margin-bottom: 1em;
+}
+
+
+.nosotros-col-img {
+    background-image: url('../assets/img/nosotros-min.png');
+    /* para ver la img necesitamos lo siguiente */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 21.875em;
+    width: 100%; /* necesita width porque .nosotros es flex */
+    /* tenemos flex asi qe con order:2 en tamanho movil la img se coloca bajo el texto */
+    order: 2;
+}
+
+.nosotros-col-text {
+    /* tenemos flex asi qe con order:1 en tamanho movil el text se pone encima */
+    order: 1;
+}
+
+/* para evitar que nos corte la foto en 576px */
+@media (min-width:576px) {
+    .nosotros-col-img {
+        height: 31.25em;
+    }
+}
+
+@media (min-width:768px){
+    .nosotros {
+        flex-direction: row;
+    }
+    .nosotros-col-img {
+        order: 1;
+        /* para que la img tenga mismo tamanho que el texto */
+        flex: 1 1 0;
+    }
+    .nosotros-col-text {
+        order: 2;
+        /* para que el texto tenga mismo tamanho que la img */
+        flex: 1 1 0;
+    }
+}
+
+.nosotros-body {
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+.nosotros-body h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nosotros-body p {
+    font-weight: 300;
+}
+
+/* El FOOTER */
+
+.bg-footer {
+    background-color: #1E403A;
+    color: white;
+}
+
+.bg-footer p {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+}

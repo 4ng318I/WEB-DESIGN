@@ -1,0 +1,42 @@
+/*
+==== COLORES DEL SITIO WEB ===
+
+primary: #FF0075
+secondary: #172774
+nav y footer: #77D970
+color texto: #EEEEEE
+
+*/
+
+
+.bg-primary {
+    background-color: #FF0075;
+}
+
+.bg-secondary {
+    background-color: #172774;
+}
+
+.color-texto {
+    color: #EEEEEE;
+}
+
+.text-primary {
+    color: #FF0075;
+}
+
+.text-secondary {
+    color:#172774;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.width-200 {
+    width: 200px;
+}
+
+.nav-color {
+    background-color: #77D970;
+}

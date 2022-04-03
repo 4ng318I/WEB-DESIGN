@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID FLEXBOX CON BOOTSTRAP 5</title>
+    <!-- agregamos el link css de la web de bootstrap en su v.5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- EStos estilos deben de estar en otra hoja, es solamente por testear -->
+    <style>
+        .alto {
+            background-color: coral;
+            /* debe llevar un hight o no funcionara el alineamiento de columnas */
+            height: 500px;
+        }
+
+        .alto-2 {
+            background-color: darkkhaki;
+            height: 500px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- la clase container ya esta preconfigurada en bootstrap/ mira documentacion -->
+<!-- El Grid tiene que tener una clase row dentro de un container y crea 12 columnas -->
+    <div class="container">
+        <div class="row">
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">2</div>
+            <div class="col-1 border">3</div>
+            <div class="col-1 border">4</div>
+            <div class="col-1 border">5</div>
+            <div class="col-1 border">6</div>
+            <div class="col-1 border">7</div>
+            <div class="col-1 border">8</div>
+            <div class="col-1 border">9</div>
+            <div class="col-1 border">10</div>
+            <div class="col-1 border">11</div>
+            <div class="col-1 border">12</div>
+
+        <hr>
+       
+        <!-- Alineamiento de Columnas y Filas VERTICALMENTE -->
+        <div class="row alto align-items-center"> <!-- pone las filas en el centro del div -->
+            <!-- por defecto toman todo la altura de la columna/ ver .alto en <style> -->
+            <div class="col-12 col-md-4 align-self-end border">Lorem ipsum dolor sit, amet </div>
+            <!-- con align-items-XXX siempre en ROW colocamos las filas -->
+            <!-- con align-self-XXX colocamos las columnas -->
+            <div class="col-12 col-md-4 align-self-start border">Lorem ipsum dolor sit amet</div>
+        </div>
+
+        <hr>
+
+        <!-- Alineamiento de Columnas y Filas HORIZONTALMENTE -->
+        <div class="row alto-2 justify-content-around">
+        <!-- consulta justify-content-around en la guia de bootstrap 5-->
+            <div class="col-12 col-md-4 border">Lorem ipsum dolor sit</div>
+            <div class="col-12 col-md-4 border">Lorem ipsum dolor sit</div>
+        </div>
+    </div>
+    
+</body>
+</html>
